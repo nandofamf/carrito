@@ -7,13 +7,13 @@
     font-family: 'Open Sans';
 }
 body{
-    background: url("img/fondo.jpg");
+    background: url("img/a.png");
     background-size: cover;
     background-attachment: fixed;
     padding: 50px;
 }
 .contenedor{
-    background-color: #ffebc1;
+    background-color: #000000,#5c69f5;
     max-width: 1200px;
     margin: auto;
     padding: 40px;
@@ -28,12 +28,12 @@ body{
 }
 .contenedor header .logo-titulo a{
     text-decoration: none;
-    color: #000;
+    color: #ffffff;
     display: flex;
     align-items: center;
 }
 .contenedor header .logo-titulo i{
-    background-color: #fff3d2;
+    background-color: #ffffff;
     font-size: 20px;
     margin-right: 10px;
 }
@@ -42,15 +42,15 @@ body{
 }
 .contenedor header nav a{
     text-decoration: none;
-    color: #000;
+    color: #ffffff;
     font-weight: bold;
     padding: 0 10px;
 }
 .contenedor header nav a:hover{
-    color: #ff6b01;
+    color: #ffffff;
 }
 .contenedor header nav .selected{
-    color: #ff6b01;
+    color: #ffffff;
 }
 .contenedor header .carrito{
     font-weight: bold;
@@ -59,11 +59,11 @@ body{
 }
 .contenedor header .carrito a{
     text-decoration: none;
-    color: #000;
+    color: #ffffff;
 }
 .contenedor header .carrito .icono-carrito{
     display: inline-block;
-    background-color: #fff3d2;
+    background-color: #daaf38;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -93,7 +93,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background: url(img/fondo-shoes.jpg);
+    background: url(img/b.png);
     background-size: cover;
     width: 100%;
     height: 300px;
@@ -117,7 +117,7 @@ body{
 .contenedor-seccion .inicio .col .titulo-inicio{
    line-height: 40px;
    font-size: 30px;
-   color: #444;
+   color: #ffffff;
    margin-bottom: 15px;
 }
 .contenedor-seccion .inicio .col .buscador{
@@ -307,9 +307,7 @@ body{
     border-radius: 50%;
 }
 
-/* ****************** */
-/* DETALLER PRODUCTO */
-/* ****************** */
+
 .detalle-producto {
     position: relative;
     padding: 0 50px;
@@ -442,82 +440,7 @@ body{
     text-align: center;
     
 }
-/* ****************** */
-/* SECCION BLOG */
-/* ****************** */
-.blog {
-    position: relative;
-    padding: 0 50px;
-}
-.blog .fila{
-    /* background:#ffebc1; */
-    /* border-radius: 40px; */
-    display: flex;
-    justify-content: space-around;
-    /* box-shadow: inset 0 0 20px 10px rgba(255,255,255,.4), 0px 0 10px 0 #000; */
-    margin-bottom: 20px;
-}
-.blog .fila .col{
-    width: 30%;
-    border-radius: 20px;
-    overflow: hidden;
-}
-.blog .fila .col .contenedor-img-metadatos{
-    position: relative;
-}
-.blog .fila .col .contenedor-img-metadatos img{
-    display: block;
-    width: 100%;
-}
-.blog .fila .col .contenedor-img-metadatos .metadatos{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    background: rgba(0,0,0,.6);
-    color: #fff;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    scale: 0.5;
-    opacity: 0;
-    transition: .3s;
-}
-.blog .fila .col .contenedor-img-metadatos:hover .metadatos{
-    scale: 1;
-    opacity: 1;
-}
-.blog .fila .col .contenedor-img-metadatos .metadatos span{
-    display: block;
-    margin: 5px 0;
-    font-size: 20px;
-}
-.blog .fila .col .contenedor-img-metadatos .metadatos span i{
-    margin-right: 10px;
-}
-.blog .fila .col .contenido{
-   padding: 10px;
-}
-.blog .fila .col .contenido header{
-    margin: 10px 0;
-}
-.blog .fila .col .contenido h2{
-   font-weight: normal;
-   margin-bottom: 20px;
-   font-size: 18px;
- }
 
- .blog .fila .col .contenido p{
-   margin-bottom: 20px;
-}
-.blog .fila .col .contenido a{
-   text-decoration: none;
-   color: #ff6b01;
-}
-.blog .fila .col .contenido a:hover{
-    text-decoration: underline;
-}
 
 /* ****************** */
 /* CONTACTO */
@@ -701,7 +624,7 @@ body{
 }
 .mi-carrito .productos-carrito .finalizar-compra .btn-pagar{
     width: auto;
-    background-color: #000;
+    background-color: #ffffff;
     color: #fdc20c;
     border: none;
     padding: 10px;
@@ -851,4 +774,192 @@ body{
     .mi-carrito .productos-carrito .fila .precio span{
         font-size: 16px;
     }
+
+/* Estilo para la sección de reseñas */
+.seccion-resenas {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.seccion-resenas h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+#resenas-lista {
+    margin-bottom: 20px;
+}
+
+.resena {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.resena strong {
+    font-size: 18px;
+    color: #007BFF;
+}
+
+.resena p {
+    font-size: 16px;
+    color: #555;
+}
+
+.formulario-resena {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario-resena h4 {
+    font-size: 20px;
+    color: #333;
+}
+
+#contenido-resena, #nombre-usuario {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#contenido-resena {
+    resize: none;
+}
+
+button#enviar-resena {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#enviar-resena:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilo para la selección de estrellas */
+.calificacion-estrellas {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.calificacion-estrellas label {
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffcc00;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+
+
+/* Estilos para el carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: auto;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Estilos para el carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
 }

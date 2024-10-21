@@ -1,52 +1,62 @@
+// Función para agregar una nueva reseña al listado
+document.getElementById('enviar-resena').addEventListener('click', function() {
+    const contenidoResena = document.getElementById('contenido-resena').value;
+    const nombreUsuario = document.getElementById('nombre-usuario').value;
+    const estrellasSeleccionadas = document.querySelector('input[name="rating"]:checked');
 
-let imgProducto = document.getElementById("imgProducto");
-let miniaturas = document.querySelectorAll(".miniaturas img");
+    if (contenidoResena && nombreUsuario && estrellasSeleccionadas) {
+        const valorEstrellas = estrellasSeleccionadas.value;
 
-function setMini(pos){
+        // Crear el nuevo elemento de reseña
+        const nuevaResena = document.createElement('div');
+        nuevaResena.classList.add('reseña');
 
-    if(pos=='0'){
-        imgProducto.style.transform = "rotateZ(0deg)";
-       
+        // Generar estrellas visuales en base a la calificación seleccionada
+        let estrellasHTML = '';
+        for (let i = 0; i < valorEstrellas; i++) {
+            estrellasHTML += '★';
+        }
+        for (let i = valorEstrellas; i < 5; i++) {
+            estrellasHTML += '☆';
+        }
+
+        // Crear la reseña con estrellas y el comentario
+        nuevaResena.innerHTML = `<strong>${nombreUsuario}:</strong><div class="estrellas">${estrellasHTML}</div><p>${contenidoResena}</p>`;
+
+        // Agregar la reseña al contenedor de reseñas
+        document.getElementById('resenas-lista').appendChild(nuevaResena);
+
+        // Limpiar los campos
+        document.getElementById('contenido-resena').value = '';
+        document.getElementById('nombre-usuario').value = '';
+        document.querySelector('input[name="rating"]:checked').checked = false;
+    } else {
+        alert('Por favor, completa todos los campos y selecciona una calificación.');
     }
-    if(pos=='1'){
-        imgProducto.style.transform = "rotateZ(35deg)";
-        
-    }
-    if(pos=='2'){
-        imgProducto.style.transform = "rotateZ(-55deg) scale(0.75)";
-       
-    }
+});
 
-    miniaturas[0].style.backgroundColor = "#fff1d9";
-    miniaturas[1].style.backgroundColor = "#fff1d9";
-    miniaturas[2].style.backgroundColor = "#fff1d9";
-    miniaturas[pos].style.backgroundColor = "#fdc10e";
+// Funcionalidad del carrusel
+let currentIndex = 0;
+const images = document.querySelectorAll('.carousel-item');
+const totalImages = images.length;
+
+document.querySelector('.carousel-next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalImages;
+    updateCarousel();
+});
+
+document.querySelector('.carousel-prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    updateCarousel();
+});
+
+function updateCarousel() {
+    const carouselWidth = document.querySelector('.carousel').offsetWidth;
+    document.querySelector('.carousel-images').style.transform = `translateX(${-currentIndex * carouselWidth}px)`;
 }
 
-let sizes = document.querySelectorAll(".info-detalle button");
-
-function setSize(pos){
-    sizes[0].style.backgroundColor = "#fff1d9";
-    sizes[1].style.backgroundColor = "#fff1d9";
-    sizes[2].style.backgroundColor = "#fff1d9";
-    sizes[pos].style.backgroundColor = "#fdc10e";
-}
-
-//MENU RESPONSIVE
-let menu_responsive_visible = false;
-let nav_responsive = document.getElementById("nav-responsive");
-let nav = document.getElementById("nav");
-let close_responsive = document.getElementById("close-responsive");
-
-nav_responsive.onclick = function(){
-    if(menu_responsive_visible==false){
-        nav.className = "menu-responsive";
-        menu_responsive_visible = true;
-    }
-}
-close_responsive.onclick = function(){
-    if(menu_responsive_visible==true){
-        nav.className = "";
-        menu_responsive_visible = false;
-    }
-}
+// Cambiar las imágenes automáticamente cada 5 segundos
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalImages;
+    updateCarousel();
+}, 5000);

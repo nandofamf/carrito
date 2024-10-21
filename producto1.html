@@ -12,14 +12,13 @@
         <header>
             <div class="logo-titulo">
                 <a href="index.html">
-                    <i class="fa-regular fa-circle-dot"></i>
+                    
                     <h1>SportShoes</h1>
                 </a>
             </div>
             <nav id="nav">
                 <a href="index.html" class="selected">Inicio</a>
                 <a href="tienda.html">Tienda</a>
-                <a href="blog.html">Blog</a>
                 <a href="contacto.html">Contacto</a>
                 <span id="close-responsive">
                     <i class="fa-solid fa-xmark"></i>
@@ -104,120 +103,70 @@
                 </div>
             </section>
 
-            <h2 class="subtitulo-seccion">Productos Relacionados</h2>
-            
-            <section id="productos" class="productos">
-                <div class="fila">
-                    <div class="col fondo-dots">
-                        <header>
-                            <span class="like"><i class="fa-solid fa-heart"></i></span>
-                            <span class="cart"><i class="fa-solid fa-bag-shopping"></i></span>
-                        </header>
-                        <a href="producto1.html">
-                            <div class="contenido">
-                                <div class="fondo orange">
-                                    <div class="circulo"></div>
-                                </div>
-                                <img src="img/shoes1.png" alt="">
-                                <h2>Nike Air Max 270 to Chuck Taylors</h2>
-                                <h2>$20.000</h2>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="col fondo-dots">
-                        <header>
-                            <span class="like"><i class="fa-solid fa-heart"></i></span>
-                            <span class="cart"><i class="fa-solid fa-bag-shopping"></i></span>
-                        </header>
-                        
-                        <a href="producto2.html">
-                            <div class="contenido">
-                                <div class="fondo blue">
-                                    <div class="circulo"></div>
-                                </div>
-                                <img src="img/shoes2.png" alt="">
-                                <h2>Zapatillas Jaguar Oficial Deportiva</h2>
-                                <h2>$35.000</h2>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col fondo-dots">
-                        <header>
-                            <span class="like"><i class="fa-solid fa-heart"></i></span>
-                            <span class="cart"><i class="fa-solid fa-bag-shopping"></i></span>
-                        </header>
-                        
-                        <a href="#">
-                            <div class="contenido">
-                                <div class="fondo green">
-                                    <div class="circulo"></div>
-                                </div>
-                                <img src="img/shoes3.png" alt="">
-                                <h2>Zapatillas Entrenamiento Nike Air Max</h2>
-                                <h2>$35.000</h2>
-                            </div>
-                        </a>
-                    </div>
+            <!-- Sección de reseñas -->
+            <section class="seccion-resenas">
+                <h3>Reseñas</h3>
+                <div id="resenas-lista">
+                    <!-- Aquí aparecerán las reseñas -->
                 </div>
-                <div class="fila">
-                    <div class="col fondo-dots">
-                        <header>
-                            <span class="like"><i class="fa-solid fa-heart"></i></span>
-                            <span class="cart"><i class="fa-solid fa-bag-shopping"></i></span>
-                        </header>
-                        
-                        <a href="#">
-                            <div class="contenido">
-                                <div class="fondo green">
-                                    <div class="circulo"></div>
-                                </div>
-                                <img src="img/shoes4.png" alt="">
-                                <h2>Zapatillas Nike Court Vision Low Next Nature</h2>
-                                <h2>$64.000</h2>
-                            </div>
-                        </a>
+                
+                <div class="formulario-resena">
+                    <h4>Deja tu reseña:</h4>
+                    
+                    <!-- Selección de estrellas -->
+                    <div class="calificacion-estrellas">
+                        <label for="estrella1"><input type="radio" name="rating" value="5" id="estrella1"> ★★★★★</label>
+                        <label for="estrella2"><input type="radio" name="rating" value="4" id="estrella2"> ★★★★☆</label>
+                        <label for="estrella3"><input type="radio" name="rating" value="3" id="estrella3"> ★★★☆☆</label>
+                        <label for="estrella4"><input type="radio" name="rating" value="2" id="estrella4"> ★★☆☆☆</label>
+                        <label for="estrella5"><input type="radio" name="rating" value="1" id="estrella5"> ★☆☆☆☆</label>
                     </div>
-                    <div class="col fondo-dots">
-                        <header>
-                            <span class="like"><i class="fa-solid fa-heart"></i></span>
-                            <span class="cart"><i class="fa-solid fa-bag-shopping"></i></span>
-                        </header>
-                        
-                        <a href="#">
-                            <div class="contenido">
-                                <div class="fondo orange">
-                                    <div class="circulo"></div>
-                                </div>
-                                <img src="img/shoes5.png" alt="">
-                                <h2>Zapatillas Urbanas Olympikus G Dínamo Mujer</h2>
-                                <h2>$17.999</h2>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col fondo-dots">
-                        <header>
-                            <span class="like"><i class="fa-solid fa-heart"></i></span>
-                            <span class="cart"><i class="fa-solid fa-bag-shopping"></i></span>
-                        </header>
-                        
-                        <a href="#">
-                            <div class="contenido">
-                                <div class="fondo blue">
-                                    <div class="circulo"></div>
-                                </div>
-                                <img src="img/shoes6.png" alt="">
-                                <h2>Zapatillas Topper X Forcer (Cf)</h2>
-                                <h2>$24.000</h2>
-                            </div>
-                        </a>
-                    </div>
+
+                    <textarea id="contenido-resena" rows="5" placeholder="Escribe tu reseña aquí..."></textarea>
+                    <input type="text" id="nombre-usuario" placeholder="Tu nombre">
+                    <button id="enviar-resena">Enviar Reseña</button>
                 </div>
             </section>
-
         </section>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Función para agregar una nueva reseña al listado
+        document.getElementById('enviar-resena').addEventListener('click', function() {
+            const contenidoResena = document.getElementById('contenido-resena').value;
+            const nombreUsuario = document.getElementById('nombre-usuario').value;
+            const estrellasSeleccionadas = document.querySelector('input[name="rating"]:checked');
+
+            if (contenidoResena && nombreUsuario && estrellasSeleccionadas) {
+                const valorEstrellas = estrellasSeleccionadas.value;
+
+                // Crear el nuevo elemento de reseña
+                const nuevaResena = document.createElement('div');
+                nuevaResena.classList.add('reseña');
+
+                // Generar estrellas visuales en base a la calificación seleccionada
+                let estrellasHTML = '';
+                for (let i = 0; i < valorEstrellas; i++) {
+                    estrellasHTML += '★';
+                }
+                for (let i = valorEstrellas; i < 5; i++) {
+                    estrellasHTML += '☆';
+                }
+
+                // Crear la reseña con estrellas y el comentario
+                nuevaResena.innerHTML = `<strong>${nombreUsuario}:</strong><div class="estrellas">${estrellasHTML}</div><p>${contenidoResena}</p>`;
+
+                // Agregar la reseña al contenedor de reseñas
+                document.getElementById('resenas-lista').appendChild(nuevaResena);
+
+                // Limpiar los campos
+                document.getElementById('contenido-resena').value = '';
+                document.getElementById('nombre-usuario').value = '';
+                document.querySelector('input[name="rating"]:checked').checked = false;
+            } else {
+                alert('Por favor, completa todos los campos y selecciona una calificación.');
+            }
+        });
+    </script>
 </body>
 </html>
