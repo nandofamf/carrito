@@ -12,8 +12,8 @@
         <header>
             <div class="logo-titulo">
                 <a href="index.html">
-                    
-                    <h1>SportShoes</h1>
+                   
+                    <h1>WalkWave</h1>
                 </a>
             </div>
             <nav id="nav">
@@ -28,12 +28,12 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <div class="carrito">
-                <span class="total-compra">$ 55,000.00</span>
+                <span class="total-compra"></span>
                 <a href="carrito.html">
                     <span class="icono-carrito">
                         <i class="fa-solid fa-bag-shopping"></i>
                         <div class="total-item-carrito">
-                            2
+                            0
                         </div>
                     </span>
                 </a>
@@ -53,6 +53,7 @@
                     <a href="producto2.html">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
+                    
                 </div>
             </div>
 
@@ -60,18 +61,18 @@
                 <div class="fila">
                     <div class="col izquierda">
                         <h3>Nike Air Max 270 to Chuck Taylors</h3>
-                        <p>Átate los cordones 100 % reciclados y empieza con buen pie en el running gracias a la suavidad de las Nike Air Max 270. </p>
+                        <p>La Nike Air Max 270 combina lo mejor de la tecnología moderna con el diseño icónico de la línea Air Max. Este modelo está inspirado en las versiones clásicas de Air Max 180 y Air Max 93, 
+                            pero lleva la amortiguación a un nuevo nivel con su unidad Air visible de 270 grados, que ofrece una comodidad superior en cada paso.</p>
                         <div class="miniaturas">
                             <img src="img/mini-shoes1.png" alt="" class="mini-selected" onclick="setMini('0')">
-                            <img src="img/mini-shoes2.png" alt="" onclick="setMini('1')">
-                            <img src="img/mini-shoes3.png" alt="" onclick="setMini('2')">
+                           
                         </div>
 
                     </div>
                     <div class="col centro">
                         <div class="img-producto" id="img-producto">
                             <img src="img/shoes1.png" alt="" id="imgProducto">
-                            <h3 class="precio-producto">$20,000.00</h3>
+                            <h3 class="precio-producto">$35,000.00</h3>
                         </div>
                     </div>
                     <div class="col derecha">
@@ -84,27 +85,22 @@
                             <i class="fa-solid fa-star"></i>
                             4.5 (60)
                         </div>
-                        <div class="info-detalle">
-                            Color:
-                            <input type="radio" class="color1" checked name="color">
-                            <input type="radio" class="color2" name="color"> 
-                            <input type="radio" class="color3" name="color"> 
-                            <input type="radio" class="color4" name="color">  
-                        </div>
+                        
                         <div class="info-detalle">
                             Size:
                             <button class="size-selected" onclick="setSize(0)">39</button>
-                            <button onclick="setSize(1)">40</button>
-                            <button onclick="setSize(2)">42</button>
+                           
+                          
                         </div>
 
-                        <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                        <button class="btn-agregar-carrito" onclick="window.location.href='carrito.html'">Ir a carrito</button>
                     </div>
                 </div>
             </section>
 
-            <!-- Sección de reseñas -->
-            <section class="seccion-resenas">
+            
+               <!-- Sección de reseñas -->
+               <section class="seccion-resenas">
                 <h3>Reseñas</h3>
                 <div id="resenas-lista">
                     <!-- Aquí aparecerán las reseñas -->
